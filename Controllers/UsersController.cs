@@ -1,5 +1,6 @@
 ﻿using CloudPixels.Data;
 using CloudPixels.Entities;
+using CloudPixelsAPI.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,9 +11,7 @@ using System.Threading.Tasks;
 namespace CloudPixels.Controllers
 {
 
-    [ApiController]
-    [Route("api/[controller]")]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseApiController
     {
         private readonly DataContext _context;
 
