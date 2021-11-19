@@ -26,7 +26,6 @@ namespace CloudPixelsAPI.Controllers
         }
 
         [HttpPost("register")]
-        [AllowAnonymous]
         public async Task<ActionResult<UserDto>> Register(RegisterDto registerDto)
         {
             if (await UserExists(registerDto.Username))
@@ -51,7 +50,6 @@ namespace CloudPixelsAPI.Controllers
             };
         }
 
-        [Authorize]
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
